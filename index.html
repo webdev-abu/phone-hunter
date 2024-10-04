@@ -7,6 +7,17 @@
     <!-- DaisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +27,7 @@
 </head>
 <body class="poppins">
     <header class="bg-[rgba(13,110,253,0.1)]">
-        <div class="max-w-md navbar ">
+        <div class="max-w-md mx-auto navbar ">
             <div class="navbar-start">
               <h1 class="brand-name text-[#403F3F] font-bold text-[25px]">Hot Gadgets</h1>
             </div>
@@ -55,5 +66,10 @@
             </div>
         </div>
     </header>
+    <main>
+        <section class="max-w-md mx-auto">
+            <h2 class="text-3xl font-bold mb-5 text-center">Our Products</h>
+        </section>
+    </main>
 </body>
 </html>
