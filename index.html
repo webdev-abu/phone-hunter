@@ -27,14 +27,15 @@
 </head>
 <body class="poppins">
     <header class="bg-[rgba(13,110,253,0.1)]">
-        <div class="max-w-md mx-auto navbar ">
+        <div class="w-11/12 mx-auto navbar py-5">
             <div class="navbar-start">
               <h1 class="brand-name text-[#403F3F] font-bold text-[25px]">Hot Gadgets</h1>
             </div>
             <div class="navbar-center">
                 <label class="input input-bordered flex items-center gap-2">
-                    <input type="text" class="grow" placeholder="Search" />
+                    <input id="Search-box" type="text" class="grow" placeholder="Search" />
                     <svg
+                     onclick="handleSearch()"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 16 16"
                       fill="currentColor"
@@ -52,7 +53,7 @@
               </button>
             </div>
           </div>
-          <div class="hero min-h-screen" style="background-image: url(https://photo-cdn2.icons8.com/HWKR6gefz7q1sWzxhIw3TBl58ozxsoAyeOcQBbEE1uU/rs:fit:1608:1072/czM6Ly9pY29uczgu/bW9vc2UtcHJvZC5l/eHRlcm5hbC9hMmE0/Mi9kM2JjYjRjYzhj/Zjk0YmY3YWJiMzg4/NzE1NTgwZTdjMy5q/cGc.jpg);">
+          <div class="hero  h-[400px] object-fill" style="background-image: url(https://photo-cdn2.icons8.com/HWKR6gefz7q1sWzxhIw3TBl58ozxsoAyeOcQBbEE1uU/rs:fit:1608:1072/czM6Ly9pY29uczgu/bW9vc2UtcHJvZC5l/eHRlcm5hbC9hMmE0/Mi9kM2JjYjRjYzhj/Zjk0YmY3YWJiMzg4/NzE1NTgwZTdjMy5q/cGc.jpg);">
             <div class="hero-overlay bg-opacity-60"></div>
             <div class="hero-content text-neutral-content text-center">
                 <div class="max-w-md">
@@ -67,9 +68,28 @@
         </div>
     </header>
     <main>
-        <section class="max-w-md mx-auto">
-            <h2 class="text-3xl font-bold mb-5 text-center">Our Products</h>
+        <section class="my-5">
+            <h2 class="text-3xl font-bold mb-5 text-center py-5">Our Products</h2>
+            <div id="spiner" class="loader"></div>
+              <div id="phone-container" class="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+              </div>
         </section>
+        
+
+        <div class="text-center" id="showAll-Contaier">
+          <button onclick="handleShowAll()" class="btn px-6 py-3 bg-[#0D6EFD] text-[#FFFFFF] font-bold text-[20px]">Show All</button>
+        </div>
+
     </main>
+
+    <!-- Open the modal using ID.showModal() method -->
+
+<div id="modal-container">
+  
+</div>
+    
+
+
 </body>
+<script src="js/app.js"></script>
 </html>
