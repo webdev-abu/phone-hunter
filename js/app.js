@@ -8,6 +8,7 @@ const loadAllphones = async(status,searchText)=>{
     const data = await res.json();
     if(status){
         displayAllPhone(data.data);
+
     }else{
         displayAllPhone(data.data.slice(0,6));
     }
@@ -18,7 +19,12 @@ const loadAllphones = async(status,searchText)=>{
 const displayAllPhone = (phones) =>{
     const phoneContainer = document.getElementById('phone-container');
     document.getElementById('phone-container').style.display='';
-    document.getElementById('showAll-Contaier').style.display='';
+    if(phones.length < 14 ){
+        document.getElementById('showAll-Contaier').style.display='';
+    }else{
+        document.getElementById('showAll-Contaier').style.display='none';
+    }
+    
     phoneContainer.innerHTML='';
     phones.forEach(phone => {
         const {brand,phone_name,slug,image}=phone;
